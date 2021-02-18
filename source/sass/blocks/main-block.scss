@@ -7,6 +7,7 @@
 }
 
 .main-block__wrapper {
+  display: flex;
   max-width: 1420px;
   padding-top: 316px;
   margin: 0 auto;
@@ -16,20 +17,7 @@
 }
 
 .main-block__content {
-  position: relative;
   max-width: 780px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background: url("../img/board.png") no-repeat,
-                url("../img/main-block-triangle.svg") no-repeat -7px -141px;
-    top: -57px;
-    left: 787px;
-    width: 705px;
-    height: 515px;
-    z-index: 5;
-  }
 }
 
 .main-block h2 {
@@ -79,6 +67,20 @@
 .main-block__button {
   margin-left: 97px;
   margin-bottom: 128px;
+}
+
+.main-block__image-container {
+  position: relative;
+  width: 705px;
+  height: 515px;
+}
+
+.main-block__image-container img {
+  position: absolute;
+  width: 705px;
+  height: 515px;
+  top: -55px;
+  left: 190px;
 }
 
 .main-block__scroll-down {
