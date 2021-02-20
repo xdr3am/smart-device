@@ -30,6 +30,15 @@
     color: $alt-text-color;
     background-color: $decoration-color;
     min-height: 55px;
+
+    @media (max-width: $tablet-width) {
+      width: 379px;
+    }
+
+    @media (max-width: $mobile-width) {
+      max-width: 767px;
+      width: 100%;
+    }
   }
 
   &:hover,

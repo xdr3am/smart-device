@@ -1,23 +1,60 @@
 .main-block {
+  position: relative;
   min-height: 878px;
-  background: url("../img/main-block-bg.png") no-repeat;
+  background: url("../img/main-block-bg-v2@1x.jpg") no-repeat #1b2a32;
   background-size: cover;
-  background-color: #1b2a32;
-  overflow-x: hidden;
+  background-position: center;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/main-block-bg-v2@2x.jpg") no-repeat #1b2a32;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 680px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 647px;
+  }
 }
 
 .main-block__wrapper {
   display: flex;
-  max-width: 1420px;
+  width: 100%;
+  max-width: 1425px;
   padding-top: 316px;
   margin: 0 auto;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 88px;
+  padding-right: 88px;
   z-index: 3;
+
+  @media (max-width: $tablet-width) {
+    max-width: 1023px;
+    padding-top: 190px;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 767px;
+    padding-top: 285px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .main-block__content {
   max-width: 780px;
+  width: 100%;
+  margin-bottom: 90px;
+  z-index: 6;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
 }
 
 .main-block h2 {
@@ -31,6 +68,16 @@
   padding: 0;
   margin: 0;
   margin-bottom: 27px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 40px;
+    line-height: 47px;
+  }
 }
 
 .main-block__list {
@@ -38,6 +85,14 @@
   padding: 0;
   margin: 0;
   margin-bottom: 43px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 41px;
+  }
 }
 
 .main-block__item {
@@ -52,6 +107,10 @@
     width: 66px;
     height: 2px;
     background-color: $alt-text-color;
+
+    @media (max-width: $tablet-width) {
+      width: 33px;
+    }
   }
 }
 
@@ -60,27 +119,103 @@
   line-height: 34px;
   color: $alt-text-color;
   padding: 0;
-  padding-left: 97px;
+  padding-left: 100px;
   margin: 0;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 28px;
+    padding-left: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 
 .main-block__button {
-  margin-left: 97px;
+  margin-left: 100px;
   margin-bottom: 128px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 0;
+    margin-bottom: 0;
+
+    &::before {
+      content: "Бесплатная консультация";
+      font-size: initial;
+      letter-spacing: 0.05em;
+    }
+  }
 }
 
 .main-block__image-container {
   position: relative;
-  width: 705px;
-  height: 515px;
+  width: 100%;
+  max-width: 705px;
+  flex-shrink: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 670px;
+    height: 640px;
+    top: -198px;
+    left: 64px;
+    z-index: 1;
+    background: url("../img/main-block-triangle.svg") no-repeat;
+    background-size: cover;
+
+    @media (max-width: $tablet-width) {
+      width: 528px;
+      height: 505px;
+      top: -229px;
+      left: auto;
+      right: 142px;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 505px;
+      height: 483px;
+      top: -331px;
+      right: -322px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    position: absolute;
+  }
 }
 
 .main-block__image-container img {
   position: absolute;
   width: 705px;
   height: 515px;
-  top: -55px;
-  left: 190px;
+  top: -57px;
+  left: 70px;
+  z-index: 2;
+
+  @media (max-width: $tablet-width) {
+    width: 465px;
+    height: 340px;
+    top: -76px;
+    left: auto;
+    right: 138px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 301px;
+    height: 220px;
+    top: -193px;
+    right: 9px;
+  }
 }
 
 .main-block__scroll-down {
@@ -98,5 +233,9 @@
   &:focus {
     opacity: 1;
     transition: opacity 0.1s;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }

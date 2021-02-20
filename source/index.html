@@ -18,7 +18,10 @@
     <nav class="page-header__main-nav main-nav">
       <div class="main-nav__wrapper">
         <a class="main-nav__logo">
-          <img src="img/logo.svg" alt="Логотип компании Smart Device" width="202" height="52">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+            <img src="img/logo.svg" alt="Логотип компании Smart Device">
+          </picture>
         </a>
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -62,7 +65,8 @@
           <a href="#" class="main-block__scroll-down">Скролл вниз</a>
         </div>
         <div class="main-block__image-container">
-          <img src="img/board.png" alt="Печатная плата" width="705" height="515">
+          <!-- 1x: 705px; 2x: 1410px -->
+          <img src="img/board@1x.png" srcset="img/board@2x.png 2x" alt="Печатная плата" width="705" height="515">
         </div>
       </div>
     </section>
