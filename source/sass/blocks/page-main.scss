@@ -1,0 +1,16 @@
+.page-main__triangle {
+  background: url("../img/features-bg.svg") no-repeat;
+  background-size: auto;
+  background-position-y: -28px;
+  background-position-x: center;
+
+  @media (max-width: $tablet-width) {
+    background-position-y: -85px;
+    background-position-x: -349px;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-position-y: 475px;
+    background-position-x: -680px;
+  }
+}

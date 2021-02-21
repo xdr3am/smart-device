@@ -1,15 +1,15 @@
 .features {
   padding-top: 110px;
-  padding-bottom: 110px;
+  padding-bottom: 108px;
 
   @media (max-width: $tablet-width) {
     padding-top: 54px;
-    padding-bottom: 54px;
+    padding-bottom: 58px;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 37px;
-    padding-bottom: 60px;
+    padding-bottom: 56px;
   }
 }
 
@@ -48,6 +48,8 @@
   border: 1px solid #ebebeb;
   box-sizing: border-box;
   cursor: pointer;
+  z-index: 2;
+  background-color: #fff;
 
   &::before {
     content: "";

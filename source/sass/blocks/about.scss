@@ -1,0 +1,120 @@
+.about {
+  padding-bottom: 110px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 83px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 66px;
+  }
+}
+
+.about__wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.about__text {
+  position: relative;
+  max-width: 984px;
+  padding-left: 179px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 2px;
+    width: 115px;
+    height: 305px;
+    background: url("../img/2005@1x.png") no-repeat;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/2005@2x.png") no-repeat;
+      background-size: contain;
+    }
+
+    @media (max-width: $tablet-width) {
+      width: 130px;
+      height: 350px;
+      top: 8px;
+      left: 3px;
+    }
+
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 188px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+  }
+}
+
+.about__wrapper h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 21px;
+  }
+}
+
+.about__wrapper p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+
+  @media (max-width: $tablet-width) {
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @media (max-width: $mobile-width) {
+    -webkit-line-clamp: 8;
+    margin-bottom: 47px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.about__button {
+  margin-top: 40px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 33px;
+  }
+}
