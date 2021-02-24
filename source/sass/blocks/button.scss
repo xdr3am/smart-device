@@ -15,9 +15,20 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: all 0.2s;
   padding: 12px;
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    color: $base-text-color;
+    background-color: $alt-text-color;
+    transition: all 0.2s;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   &--main-nav {
     border: 1px solid #ffffff;
@@ -44,15 +55,18 @@
   &--about {
     color: $decoration-color;
     border: 1px solid $decoration-color;
+
+    &:hover,
+    &:focus {
+      color: $alt-text-color;
+      background-color: $base-text-color;
+      border: 1px solid $base-text-color;
+      transition: all 0.2s;
+    }
   }
 
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-    transition: transform 0.2s;
-  }
-
-  &:active {
-    opacity: 0.5;
+  &--form {
+    width: 100%;
+    border: 1px solid $alt-text-color;
   }
 }

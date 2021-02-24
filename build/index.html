@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="keywords" content="Smart Device, печатные платы, производство, монтаж, комплектующие">
-  <meta name="description" content="Печатные платы = производство и монтаж, поставка комплектующих, блоков и модулей">
+  <meta name="description" content="Печатные платы - производство и монтаж, поставка комплектующих, блоков и модулей">
   <title>Smart Device - умные технологии</title>
   <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin="">
@@ -126,11 +126,13 @@
           <div class="about__text">
             <h2>О компании</h2>
             <p>
-              Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
+              Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
+              1997
               года. Выполняем срочные заказы и пилотные образцы до 10 дней.
             </p>
             <p>
-              Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
+              Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
+              Печатные
               платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
               РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
               светотехники России.
@@ -170,6 +172,43 @@
       </div>
     </section>
     <!-- /.page-main__goods goods -->
+    <section class="page-main__form-block form-block">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <div class="form-block__wrapper">
+        <div class="form-block__image-container">
+          <img src="img/airplane@1x.png" srcset="img/airplane@2x.png 2x" alt="Бумажный самолетик" width="511" height="288">
+        </div>
+        <div class="form-block__form form">
+          <h3>Остались вопросы? Задайте их нам!</h3>
+          <p>Мы проконсультируем Вас бесплатно</p>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <ul class="form__list">
+              <li class="form__item">
+                <label class="visually-hidden" for="user-name">Имя</label>
+                <input type="text" name="user-name" id="user-name" placeholder="Имя" required="">
+              </li>
+              <li class="form__item">
+                <label class="visually-hidden" for="user-phone">Телефон</label>
+                <input type="tel" name="tel" id="user-tel" placeholder="Телефон" required="">
+              </li>
+              <li class="form__item form__item--textarea">
+                <textarea name="question" id="question" placeholder="Ваш вопрос" required=""></textarea>
+              </li>
+              <li class="form__item">
+                <button class="form__button button button--form" type="submit">
+                  Задать вопрос
+                </button>
+              </li>
+              <li class="form__item">
+                <input class="visually-hidden" type="checkbox" name="accept" id="accept" required="">
+                <label for="accept">Я согласен на обработку персональных данных</label>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- /.page-main__form-block form-block -->
   </main>
   <!-- /.page-main -->
   <footer class="page-footer"></footer>
