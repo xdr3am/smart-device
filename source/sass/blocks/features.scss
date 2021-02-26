@@ -49,7 +49,7 @@
   box-sizing: border-box;
   cursor: pointer;
   z-index: 2;
-  background-color: #fff;
+  background-color: #ffffff;
 
   &::before {
     content: "";
@@ -85,7 +85,7 @@
   transition: all 0.2s;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 
     &--watch {
       width: 32px;

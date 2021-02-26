@@ -121,12 +121,12 @@
 
 .main-nav__link:hover .main-nav__link-text::after,
 .main-nav__link:focus .main-nav__link-text::after {
-	width: 100%;
+  width: 100%;
 }
 
 .main-nav__link:hover .main-nav__link-icon,
 .main-nav__link:focus .main-nav__link-icon {
-	transform: scale(1.4);
+  transform: scale(1.4);
   transition: transform 0.2s ease-out;
 
   @media (max-width: $tablet-width) {
