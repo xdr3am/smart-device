@@ -66,8 +66,11 @@
           <a href="#features" class="main-block__scroll-down">Скролл вниз</a>
         </div>
         <div class="main-block__image-container">
-          <!-- 1x: 705px; 2x: 1410px -->
-          <img src="img/board@1x.png" srcset="img/board@2x.png 2x" alt="Печатная плата" width="705" height="515">
+          <picture>
+            <source type="image/webp" srcset="img/board@1x.webp 1x, img/board@2x.webp 2x">
+            <!-- 1x: 705px; 2x: 1410px -->
+            <img src="img/board@1x.png" srcset="img/board@2x.png 2x" alt="Печатная плата" width="705" height="515">
+          </picture>
         </div>
       </div>
     </section>
@@ -153,22 +156,34 @@
           <li class="goods__item">
             <a href="#" class="goods__link">
               <h3>Производство печатных плат</h3>
-              <img class="goods__item-image" src="img/goods-001@1x.png" srcset="img/goods-001@2x.png 2x"
-                alt="Производство печатных плат" width="370" height="620">
+              <picture>
+                <source srcset="img/goods-001@1x.webp 1x, img/goods-001@2x.webp 2x" type="image/webp">
+                <!-- 1х: 1217px; 2x: 2434px -->
+                <img class="goods__item-image" src="img/goods-001@1x.png" srcset="img/goods-001@2x.png 2x"
+                  alt="Производство печатных плат" width="370" height="620">
+              </picture>
             </a>
           </li>
           <li class="goods__item">
             <a href="#" class="goods__link">
               <h3>Монтаж печатных плат</h3>
-              <img src="img/goods-002@1x.png" srcset="img/goods-002@2x.png 2x" alt="Монтаж печатных плат" width="370"
-                height="620">
+              <picture>
+                <source srcset="img/goods-002@1x.webp 1x, img/goods-002@2x.webp 2x" type="image/webp">
+                <!-- 1х: 370px; 2x: 740px -->
+                <img src="img/goods-002@1x.png" srcset="img/goods-002@2x.png 2x" alt="Монтаж печатных плат" width="370"
+                  height="620">
+              </picture>
             </a>
           </li>
           <li class="goods__item">
             <a href="#" class="goods__link">
               <h3>Комплектующие для светотехники</h3>
-              <img src="img/goods-003@1x.png" srcset="img/goods-003@2x.png 2x" alt="Комплектующие для светотехники"
-                width="370" height="620">
+              <picture>
+                <source srcset="img/goods-003@1x.webp 1x, img/goods-003@2x.webp 2x" type="image/webp">
+                <!-- 1х: 370px; 2x: 740px -->
+                <img src="img/goods-003@1x.png" srcset="img/goods-003@2x.png 2x" alt="Комплектующие для светотехники"
+                  width="370" height="620">
+              </picture>
             </a>
           </li>
         </ul>
@@ -179,8 +194,12 @@
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <div class="form-block__wrapper">
         <div class="form-block__image-container">
-          <img src="img/airplane@1x.png" srcset="img/airplane@2x.png 2x" alt="Бумажный самолетик" width="511"
-            height="288">
+          <picture>
+            <source srcset="img/airplane@1x.webp 1x, img/airplane@2x.webp 2x" type="image/webp">
+            <!-- 1х: 511px; 2x: 1022px -->
+            <img src="img/airplane@1x.png" srcset="img/airplane@2x.png 2x" alt="Бумажный самолетик" width="511"
+              height="288">
+          </picture>
         </div>
         <div class="form-block__form form">
           <h3>Остались вопросы? Задайте их нам!</h3>
