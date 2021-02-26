@@ -9,6 +9,14 @@
   }
 }
 
+.contacts__title-container {
+  @media (max-width: $mobile-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .contacts h3 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
@@ -19,13 +27,13 @@
   text-transform: uppercase;
   padding: 0;
   margin: 0;
-  margin-bottom: 25px;
 }
 
 .contacts__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 24px;
 }
 
 .contacts__item a,

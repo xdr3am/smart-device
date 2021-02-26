@@ -60,7 +60,7 @@
               <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
             </li>
           </ul>
-          <a href="#" class="main-block__button button button--main-block">
+          <a href="#form-block" class="main-block__button button button--main-block">
             Получить бесплатную консультацию
           </a>
           <a href="#features" class="main-block__scroll-down">Скролл вниз</a>
@@ -175,7 +175,7 @@
       </div>
     </section>
     <!-- /.page-main__goods goods -->
-    <section class="page-main__form-block form-block">
+    <section class="page-main__form-block form-block" id="form-block">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <div class="form-block__wrapper">
         <div class="form-block__image-container">
@@ -188,15 +188,17 @@
           <form action="https://echo.htmlacademy.ru" method="get">
             <ul class="form__list">
               <li class="form__item">
-                <label class="visually-hidden" for="user-name">Имя</label>
-                <input type="text" name="user-name" id="user-name" placeholder="Имя" required>
+                <label class="visually-hidden" for="call-name">Имя</label>
+                <input type="text" name="user-name" id="call-name" placeholder="Имя" required>
               </li>
               <li class="form__item">
-                <label class="visually-hidden" for="user-phone">Телефон</label>
-                <input type="tel" name="tel" id="user-tel" placeholder="Телефон" required>
+                <label class="visually-hidden" for="call-phone">Телефон</label>
+                <input type="tel" name="phone" placeholder="Телефон"
+                  pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required>
               </li>
               <li class="form__item form__item--textarea">
-                <textarea name="question" id="question" placeholder="Ваш вопрос" required></textarea>
+                <label class="visually-hidden" for="call-question">Ваш вопрос</label>
+                <textarea name="question" id="call-question" placeholder="Ваш вопрос" required></textarea>
               </li>
               <li class="form__item">
                 <button class="form__button button button--form" type="submit">
@@ -248,9 +250,12 @@
       </div>
       <!-- /.page-footer__base -->
       <div class="page-footer__container">
-        <div class="page-footer__footer-nav footer-nav">
-          <h3>Разделы сайта</h3>
-          <ul class="footer-nav__list">
+        <div class="page-footer__footer-nav footer-nav accordion">
+          <div class="footer-nav__title-container">
+            <h3>Разделы сайта</h3>
+            <button class="footer-nav__toggle accordion__toggle" type="button" aria-label="Развернуть/свернуть раздел"></button>
+          </div>
+          <ul class="footer-nav__list accordion__pane">
             <li class="footer-nav__item">
               <a href="#">О компании</a>
             </li>
@@ -275,9 +280,12 @@
           </ul>
         </div>
         <!-- /.page-footer__footer-nav footer-nav -->
-        <div class="page-footer__contacts contacts">
-          <h3>Наш офис</h3>
-          <ul class="contacts__list">
+        <div class="page-footer__contacts contacts accordion">
+          <div class="contacts__title-container">
+            <h3>Наш офис</h3>
+            <button class="footer-nav__toggle accordion__toggle" type="button" aria-label="Развернуть/свернуть раздел"></button>
+          </div>
+          <ul class="contacts__list accordion__pane">
             <li class="contacts__item">
               <span>г. Мытищи, Олимпийский проспект, д.10</span>
             </li>
@@ -300,7 +308,8 @@
       <div class="copyright__wrapper">
         <ul class="copyright__list">
           <li class="copyright__item copyright__item--01 copyright__item--only-desktop">Все права защищены</li>
-          <li class="copyright__item copyright__item--02 copyright__item--only-desktop">1999-2018 SD Service Devices</li>
+          <li class="copyright__item copyright__item--02 copyright__item--only-desktop">1999-2018 SD Service Devices
+          </li>
           <li class="copyright__item copyright__item--03">Условия конфиденциальности</li>
           <li class="copyright__item copyright__item--04">Developed by wow studio</li>
         </ul>
@@ -308,7 +317,41 @@
     </div>
     <!-- /.page-footer__copyright copyright -->
   </footer>
+  <section class="modal">
+    <div class="modal__form form">
+      <h3>Закажите звонок</h3>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <ul class="form__list form__list--modal">
+          <li class="form__item">
+            <label class="visually-hidden" for="call-name">Имя</label>
+            <input type="text" name="user-name" id="call-name" placeholder="Имя" required>
+          </li>
+          <li class="form__item">
+            <label class="visually-hidden" for="call-phone">Телефон</label>
+            <input type="tel" name="tel" placeholder="Телефон"
+              pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required>
+          </li>
+          <li class="form__item form__item--textarea">
+            <label class="visually-hidden" for="call-question">Ваш вопрос</label>
+            <textarea name="question" id="call-question" placeholder="Ваш вопрос" required></textarea>
+          </li>
+          <li class="form__item">
+            <button class="form__button button button--form" type="submit">
+              Отправить
+            </button>
+          </li>
+          <li class="form__item">
+            <input class="visually-hidden" type="checkbox" name="accept" id="accept-modal" required>
+            <label for="accept-modal">Я согласен на обработку персональных данных</label>
+          </li>
+        </ul>
+      </form>
+      <button class="modal__close">Закрыть окно</button>
+    </div>
+  </section>
   <!-- /.page-footer -->
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
 

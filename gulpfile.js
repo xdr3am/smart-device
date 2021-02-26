@@ -17,9 +17,16 @@ const include = require(`posthtml-include`);
 const del = require(`del`);
 const concat = require(`gulp-concat`);
 
-gulp.task(`scripts`, function() {
-  return gulp.src(`./source/js/*.js`)
+gulp.task(`main-scripts`, function() {
+  return gulp
+    .src(`./source/js/main-*.js`)
     .pipe(concat(`main.js`))
+    .pipe(gulp.dest(`./build/js/`));
+});
+
+gulp.task(`vendor-scripts`, function() {
+  return gulp.src(`./source/js/vendor-*.js`)
+    .pipe(concat(`vendor.js`))
     .pipe(gulp.dest(`./build/js/`));
 });
 
@@ -105,5 +112,5 @@ gulp.task(`clean`, function () {
   return del(`build`);
 });
 
-gulp.task(`build`, gulp.series(`clean`, `copy`, `scripts`, `css`, `sprite`, `html`));
+gulp.task(`build`, gulp.series(`clean`, `copy`, `main-scripts`, `vendor-scripts`, `css`, `sprite`, `html`));
 gulp.task(`start`, gulp.series(`build`, `server`));

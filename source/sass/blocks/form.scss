@@ -67,6 +67,16 @@
     grid-template-rows: auto;
     row-gap: 31px;
   }
+
+  &--modal {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 31px;
+  }
+}
+
+.form__list--modal .form__item {
+  grid-column: 1 / 2;
 }
 
 .form__item {
@@ -111,6 +121,10 @@
   }
 }
 
+.form__list--modal textarea {
+  height: 104px;
+}
+
 .form__item input[type="checkbox"] + label {
   position: relative;
   display: block;
@@ -123,6 +137,7 @@
   padding-left: 40px;
   padding-top: 10px;
   box-sizing: border-box;
+  cursor: pointer;
 
   @media (max-width: $tablet-width) {
     padding-left: 45px;
@@ -153,6 +168,10 @@
       left: 0;
     }
   }
+}
+
+.form__list--modal .form__item input[type="checkbox"] + label {
+  padding-left: 50px;
 }
 
 .form__item input[type="checkbox"]:checked + label {
