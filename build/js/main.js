@@ -15,7 +15,7 @@
   };
 
   const toggleAccordion = function (evt) {
-    Array.prototype.forEach.call(accordionPanes, function (accordionPane) {
+    accordionPanes.forEach(function (accordionPane) {
       const button = accordionPane.closest(`.accordion`).querySelector(`.accordion__toggle`);
       if (button === evt.target && !button.classList.contains(`accordion__toggle--inactive`) || button !== evt.target) {
         hidePane(button, accordionPane);
@@ -25,7 +25,7 @@
     });
   };
 
-  Array.prototype.forEach.call(accordionItems, function (accordion) {
+  accordionItems.forEach(function (accordion) {
     const accordionToggleButton = accordion.querySelector(`.accordion__toggle`);
     const accordionPane = accordion.querySelector(`.accordion__pane`);
     hidePane(accordionToggleButton, accordionPane);
@@ -60,7 +60,7 @@
   const maskedInputs = document.querySelectorAll(`input[data-inputmask]`);
 
   const applyMask = function () {
-    Array.prototype.forEach.call(maskedInputs, function (input) {
+    maskedInputs.forEach(function (input) {
       const maskOption = {
         mask: input.getAttribute(`data-inputmask`)
       };

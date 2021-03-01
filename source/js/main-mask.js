@@ -6,7 +6,7 @@
   const maskedInputs = document.querySelectorAll(`input[data-inputmask]`);
 
   const applyMask = function () {
-    Array.prototype.forEach.call(maskedInputs, function (input) {
+    maskedInputs.forEach(function (input) {
       const maskOption = {
         mask: input.getAttribute(`data-inputmask`)
       };
