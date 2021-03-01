@@ -75,7 +75,7 @@
 'use strict';
 
 (function () {
-  const KEYCODE = {
+  let KEYCODE = {
     esc: 27
   };
   const link = document.querySelector(`.main-nav__button`);

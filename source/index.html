@@ -21,7 +21,7 @@
         <a class="main-nav__logo">
           <picture>
             <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
-            <img src="img/logo.svg" alt="Логотип компании Smart Device">
+            <img src="img/logo.svg" alt="Логотип компании Smart Device" width="202" height="52">
           </picture>
         </a>
         <ul class="main-nav__list">
@@ -207,17 +207,17 @@
           <form action="https://echo.htmlacademy.ru" method="get">
             <ul class="form__list">
               <li class="form__item">
-                <label class="visually-hidden" for="call-name">Имя</label>
-                <input type="text" name="user-name" id="call-name" placeholder="Имя" required>
+                <label class="visually-hidden" for="name">Имя</label>
+                <input type="text" name="user-name" id="name" placeholder="Имя" pattern="[А-Яа-яЁё]{1,}" required>
               </li>
               <li class="form__item">
-                <label class="visually-hidden" for="call-phone">Телефон</label>
-                <input type="tel" name="phone" placeholder="Телефон"
+                <label class="visually-hidden" for="phone">Телефон</label>
+                <input type="tel" name="phone" id="phone" placeholder="Телефон"
                   pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required>
               </li>
               <li class="form__item form__item--textarea">
-                <label class="visually-hidden" for="call-question">Ваш вопрос</label>
-                <textarea name="question" id="call-question" placeholder="Ваш вопрос" required></textarea>
+                <label class="visually-hidden" for="question">Ваш вопрос</label>
+                <textarea name="question" id="question" placeholder="Ваш вопрос" required></textarea>
               </li>
               <li class="form__item">
                 <button class="form__button button button--form" type="submit">
@@ -302,7 +302,7 @@
         <div class="page-footer__contacts contacts accordion">
           <div class="contacts__title-container">
             <h3>Наш офис</h3>
-            <button class="footer-nav__toggle accordion__toggle" type="button" aria-label="Развернуть/свернуть раздел"></button>
+            <button class="contacts__toggle accordion__toggle" type="button" aria-label="Развернуть/свернуть раздел"></button>
           </div>
           <ul class="contacts__list accordion__pane">
             <li class="contacts__item">
@@ -344,11 +344,11 @@
         <ul class="form__list form__list--modal">
           <li class="form__item">
             <label class="visually-hidden" for="call-name">Имя</label>
-            <input type="text" name="user-name" id="call-name" placeholder="Имя" required>
+            <input type="text" name="user-name" id="call-name" pattern="[А-Яа-яЁё]{1,}" placeholder="Имя" required>
           </li>
           <li class="form__item">
             <label class="visually-hidden" for="call-phone">Телефон</label>
-            <input type="tel" name="tel" placeholder="Телефон"
+            <input type="tel" name="phone" id="call-phone" placeholder="Телефон"
               pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required>
           </li>
           <li class="form__item form__item--textarea">
