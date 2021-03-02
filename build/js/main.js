@@ -75,8 +75,8 @@
 'use strict';
 
 (function () {
-  let KEYCODE = {
-    esc: 27
+  const KeyCode = {
+    ESC: 27
   };
   const link = document.querySelector(`.main-nav__button`);
   const popup = document.querySelector(`.modal`);
@@ -134,7 +134,7 @@
   });
 
   window.addEventListener(`keydown`, function (evt) {
-    if (evt.keyCode === KEYCODE.esc) {
+    if (evt.keyCode === KeyCode.esc) {
       evt.preventDefault();
       if (popup.classList.contains(`modal--show`)) {
         closePopup();

@@ -99,6 +99,7 @@
   line-height: 22px;
   color: $alt-text-color;
   border: none;
+  border-radius: 0;
   background-color: rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
 
@@ -114,6 +115,12 @@
   @media (max-width: $mobile-width) {
     padding: 18px 16px;
   }
+}
+
+.form__item input[type="text"]:hover,
+.form__item input[type="tel"]:hover,
+.form__item textarea:hover {
+  box-shadow: 0 0 5px #ffffff;
 }
 
 .form__item textarea {
@@ -171,6 +178,11 @@
       left: 0;
     }
   }
+}
+
+.form__item input[type="checkbox"]:hover + label::before,
+.form__item input[type="checkbox"]:focus + label::before {
+  box-shadow: 0 0 5px #ffffff;
 }
 
 .form__list--modal .form__item input[type="checkbox"] + label {

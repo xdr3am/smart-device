@@ -1,11 +1,29 @@
 .social {
   display: flex;
-  justify-content: space-between;
-  max-width: 112px;
+  flex-wrap: wrap;
+  max-width: 127px;
   width: 100%;
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (max-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (max-width: $mobile-width) {
+    justify-content: flex-start;
+    margin-left: -15px;
+  }
+}
+
+.social__item {
+  margin-right: 15px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    margin-left: 15px;
+  }
 }
 
 .social__icon {

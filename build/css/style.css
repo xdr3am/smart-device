@@ -4,7 +4,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/pt-mono-regular.woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff"); }
+  src: url("../../fonts/pt-mono-regular.woff2") format("woff2"), url("../../fonts/pt-mono-regular.woff") format("woff"); }
 
 @font-face {
   font-family: "Roboto Condensed";
@@ -101,7 +101,7 @@ img {
         width: 379px; } }
     @media (max-width: 767px) {
       .button--main-block {
-        max-width: 767px;
+        max-width: 287px;
         width: 100%; } }
   .button--about {
     color: #00b2ff;
@@ -408,8 +408,7 @@ img {
       margin-left: 50px; } }
   @media (max-width: 767px) {
     .main-block__button {
-      margin-left: 0;
-      margin-right: 0;
+      margin: 0 auto;
       font-size: 0;
       margin-bottom: 0; }
       .main-block__button::before {
@@ -537,7 +536,6 @@ img {
   border: 1px solid #ebebeb;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  cursor: pointer;
   z-index: 2;
   background-color: #ffffff; }
   .features__item::before {
@@ -799,6 +797,7 @@ img {
 
 .goods__item {
   position: relative;
+  min-height: 620px;
   overflow: hidden; }
   @media (max-width: 1023px) {
     .goods__item {
@@ -1015,6 +1014,7 @@ img {
   line-height: 22px;
   color: #ffffff;
   border: none;
+  border-radius: 0;
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -1069,6 +1069,12 @@ img {
     .form__item textarea {
       padding: 18px 16px; } }
 
+.form__item input[type="text"]:hover,
+.form__item input[type="tel"]:hover,
+.form__item textarea:hover {
+  -webkit-box-shadow: 0 0 5px #ffffff;
+          box-shadow: 0 0 5px #ffffff; }
+
 .form__item textarea {
   resize: none; }
   @media (max-width: 767px) {
@@ -1116,6 +1122,11 @@ img {
       .form__item input[type="checkbox"] + label::before {
         top: 1px;
         left: 0; } }
+
+.form__item input[type="checkbox"]:hover + label::before,
+.form__item input[type="checkbox"]:focus + label::before {
+  -webkit-box-shadow: 0 0 5px #ffffff;
+          box-shadow: 0 0 5px #ffffff; }
 
 .form__list--modal .form__item input[type="checkbox"] + label {
   padding-left: 50px; }
@@ -1235,7 +1246,7 @@ img {
   @media (max-width: 1023px) {
     .page-footer__non-desktop {
       display: block;
-      margin-left: 18px; } }
+      margin-left: 28px; } }
   @media (max-width: 767px) {
     .page-footer__non-desktop {
       margin-left: 0;
@@ -1267,14 +1278,31 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 112px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 127px;
   width: 100%;
   list-style: none;
   padding: 0;
   margin: 0; }
+  @media (max-width: 1023px) {
+    .social {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
+  @media (max-width: 767px) {
+    .social {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      margin-left: -15px; } }
+
+.social__item {
+  margin-right: 15px; }
+  @media (max-width: 1023px) {
+    .social__item {
+      margin-right: 0;
+      margin-left: 15px; } }
 
 .social__icon {
   fill: #cdcdcd;
@@ -1298,17 +1326,19 @@ img {
     padding-right: 15px;
     padding-bottom: 25px; } }
 
-@media (max-width: 767px) {
-  .footer-nav__title-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; } }
+.footer-nav__title-container {
+  position: relative; }
+  @media (max-width: 767px) {
+    .footer-nav__title-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 .footer-nav h3 {
   font-family: "Roboto Condensed", "Arial", sans-serif;

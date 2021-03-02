@@ -72,6 +72,7 @@
 
 .goods__item {
   position: relative;
+  min-height: 620px;
   overflow: hidden;
 
   @media (max-width: $tablet-width) {
