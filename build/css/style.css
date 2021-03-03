@@ -4,7 +4,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../../fonts/pt-mono-regular.woff2") format("woff2"), url("../../fonts/pt-mono-regular.woff") format("woff"); }
+  src: url("../fonts/pt-mono-regular.woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff"); }
 
 @font-face {
   font-family: "Roboto Condensed";
@@ -492,7 +492,7 @@ img {
       display: none; } }
 
 .features {
-  padding-top: 110px;
+  padding-top: 112px;
   padding-bottom: 108px; }
   @media (max-width: 1023px) {
     .features {
@@ -532,7 +532,7 @@ img {
 .features__item {
   position: relative;
   min-height: 299px;
-  padding: 40px 44px;
+  padding: 40px 43px;
   border: 1px solid #ebebeb;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1536,6 +1536,10 @@ img {
   height: 100vh;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.5); }
+  .modal--nojs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 .modal__form {
   position: relative;
@@ -1632,3 +1636,6 @@ img {
       background-color: #c4c4c4; }
   .accordion__pane--hidden {
     display: none; } }
+
+.accordion__toggle--nojs {
+  display: none; }

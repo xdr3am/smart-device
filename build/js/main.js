@@ -27,6 +27,7 @@
 
   accordionItems.forEach(function (accordion) {
     const accordionToggleButton = accordion.querySelector(`.accordion__toggle`);
+    accordionToggleButton.classList.remove(`accordion__toggle--nojs`);
     const accordionPane = accordion.querySelector(`.accordion__pane`);
     hidePane(accordionToggleButton, accordionPane);
     accordionToggleButton.addEventListener(`click`, toggleAccordion);

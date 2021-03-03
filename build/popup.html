@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="Smart Device, печатные платы, производство, монтаж, комплектующие">
+  <meta name="description" content="Печатные платы - производство и монтаж, поставка комплектующих, блоков и модулей">
+  <title>Smart Device - умные технологии</title>
+  <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <section class="modal modal--nojs">
+    <div class="modal__form form">
+      <h3>Закажите звонок</h3>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <ul class="form__list form__list--modal">
+          <li class="form__item">
+            <label class="visually-hidden" for="call-name">Имя</label>
+            <input type="text" name="user-name" id="call-name" pattern="[А-Яа-яЁё]{1,}" placeholder="Имя" required="">
+          </li>
+          <li class="form__item">
+            <label class="visually-hidden" for="call-phone">Телефон</label>
+            <input type="tel" name="phone" id="call-phone" placeholder="Телефон" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required="">
+          </li>
+          <li class="form__item form__item--textarea">
+            <label class="visually-hidden" for="call-question">Ваш вопрос</label>
+            <textarea name="question" id="call-question" placeholder="Ваш вопрос"></textarea>
+          </li>
+          <li class="form__item">
+            <button class="form__button button button--form" type="submit">
+              Отправить
+            </button>
+          </li>
+          <li class="form__item">
+            <input class="visually-hidden" type="checkbox" name="accept" id="accept-modal" required="">
+            <label for="accept-modal">Я согласен на обработку персональных данных</label>
+          </li>
+        </ul>
+      </form>
+      <a href="index.html" class="modal__close">Закрыть окно</a>
+    </div>
+  </section>
+</body>
+</html>
