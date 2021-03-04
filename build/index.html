@@ -201,26 +201,26 @@
           <p>Мы проконсультируем Вас бесплатно</p>
           <form action="https://echo.htmlacademy.ru" method="get">
             <ul class="form__list">
-              <li class="form__item">
+              <li class="form__item form__item--order-0">
                 <label class="visually-hidden" for="name">Имя</label>
                 <input type="text" name="user-name" id="name" placeholder="Имя" pattern="[А-Яа-яЁё]{1,}" required="">
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--order-1">
                 <label class="visually-hidden" for="phone">Телефон</label>
                 <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required="">
               </li>
-              <li class="form__item form__item--textarea">
+              <li class="form__item form__item--order-2 form__item--textarea">
                 <label class="visually-hidden" for="question">Ваш вопрос</label>
                 <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--order-4">
+                <input class="visually-hidden" type="checkbox" name="accept" id="accept" required="">
+                <label for="accept">Я согласен на обработку персональных данных</label>
+              </li>
+              <li class="form__item form__item--order-3">
                 <button class="form__button button button--form" type="submit">
                   Задать вопрос
                 </button>
-              </li>
-              <li class="form__item">
-                <input class="visually-hidden" type="checkbox" name="accept" id="accept" required="">
-                <label for="accept">Я согласен на обработку персональных данных</label>
               </li>
             </ul>
           </form>
@@ -337,26 +337,26 @@
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form action="https://echo.htmlacademy.ru" method="get">
         <ul class="form__list form__list--modal">
-          <li class="form__item">
+          <li class="form__item form__item--order-0">
             <label class="visually-hidden" for="call-name">Имя</label>
             <input type="text" name="user-name" id="call-name" pattern="[А-Яа-яЁё]{1,}" placeholder="Имя" required="">
           </li>
-          <li class="form__item">
+          <li class="form__item form__item--order-1">
             <label class="visually-hidden" for="call-phone">Телефон</label>
             <input type="tel" name="phone" id="call-phone" placeholder="Телефон" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required="">
           </li>
-          <li class="form__item form__item--textarea">
+          <li class="form__item form__item--order-2 form__item--textarea">
             <label class="visually-hidden" for="call-question">Ваш вопрос</label>
             <textarea name="question" id="call-question" placeholder="Ваш вопрос"></textarea>
           </li>
-          <li class="form__item">
+          <li class="form__item form__item--order-4">
+            <input class="visually-hidden" type="checkbox" name="accept" id="accept-modal" required="">
+            <label for="accept-modal">Я согласен на обработку персональных данных</label>
+          </li>
+          <li class="form__item form__item--order-3">
             <button class="form__button button button--form" type="submit">
               Отправить
             </button>
-          </li>
-          <li class="form__item">
-            <input class="visually-hidden" type="checkbox" name="accept" id="accept-modal" required="">
-            <label for="accept-modal">Я согласен на обработку персональных данных</label>
           </li>
         </ul>
       </form>
