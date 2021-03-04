@@ -125,14 +125,10 @@
     evt.preventDefault();
     openPopup();
 
-    if (storage.name) {
-      userName.value = storage.name;
-      userPhone.value = storage.phone;
-      question.value = storage.question;
-      question.focus();
-    } else {
-      userName.focus();
-    }
+    userName.value = storage.name;
+    userPhone.value = storage.phone;
+    question.value = storage.question;
+    userName.focus();
   });
 
   close.addEventListener(`click`, function (evt) {
