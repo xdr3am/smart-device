@@ -68,5 +68,9 @@
   &--form {
     width: 100%;
     border: 1px solid $alt-text-color;
+
+    @media (max-width: $tablet-width) {
+      min-height: 47px;
+    }
   }
 }

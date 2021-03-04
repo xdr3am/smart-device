@@ -32,4 +32,18 @@
     hidePane(accordionToggleButton, accordionPane);
     accordionToggleButton.addEventListener(`click`, toggleAccordion);
   });
+
+  accordionItems.forEach((acc)=>{
+    acc.addEventListener(`click`, (evt)=>{
+
+      document.querySelectorAll(`.accordion__pane`).forEach((item)=>{
+        item.classList.add(`accordion__pane--hidden`);
+      });
+      document.querySelectorAll(`.accordion__toggle`).forEach((item)=>{
+        item.classList.add(`accordion__toggle--inactive`);
+      });
+      evt.currentTarget.querySelector(`.accordion__pane`).classList.remove(`accordion__pane--hidden`);
+      evt.currentTarget.querySelector(`.accordion__toggle`).classList.remove(`accordion__toggle--inactive`);
+    });
+  });
 })();
