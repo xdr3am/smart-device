@@ -145,7 +145,7 @@
   });
 
   window.addEventListener(`keydown`, function (evt) {
-    if (evt.keyCode === KeyCode.esc) {
+    if (evt.keyCode === KeyCode.ESC) {
       evt.preventDefault();
       if (popup.classList.contains(`modal--show`)) {
         closePopup();
